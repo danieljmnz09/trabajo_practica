@@ -59,7 +59,7 @@ function evaluarNota() {
         result.textContent = "Ingrese una nota valida";
     } else {
         result.textContent = "Ingrese un valor valido";
-    }
+    };
 
 
     input.value = "";
@@ -88,4 +88,53 @@ Cuadrado: X
 Triple: Y
 */
 
+
+function calcularCuadrado(num) {
+    return num * num;
+}
+
+function calcularTriple(num) {
+    return num * 3
+}
+
+function procesarNum() {
+    let input = document.getElementById('input3')
+    const container = document.getElementById("container3")
+    const result = document.getElementById("result3")
+    let resultado = input.value;
+    let final = ""
+    final = "Cuadrado: " + calcularCuadrado(resultado);
+    final += "\n Triple: " + calcularTriple(resultado);
+
+    result.textContent = final;
+
+    input.value = "";
+    container.classList.remove("d-none")
+};
+
+/*
+Objetivo: Manipular strings desde un input.
+Instrucciones:
+Crea un input para ingresar un texto.
+Crea una función transformarTexto.
+La función debe:
+Capturar el texto
+Convertirlo a mayúsculas (toUpperCase())
+Mostrar el resultado en un <div>
+Ejemplo esperado:
+Entrada: hola mundo
+Salida: HOLA MUNDO
+*/
+
+function transformarTexto() {
+    let input = document.getElementById('input4')
+    const container = document.getElementById("container4")
+    const result = document.getElementById("result4")
+    let resultado = input.value.toUpperCase();
+
+
+    result.textContent = resultado
+    input.value = "";
+    container.classList.remove("d-none")
+}
 
