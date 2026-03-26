@@ -43,6 +43,20 @@ Mostrar en pantalla:
 "Sobresaliente" si es 6.0 o más
 */
 
+function notas() {
+    if (numero >= 6.0 && numero <= 7.0) {
+        result.textContent = "Sobresaliente";
+    } else if (numero < 6.0 && numero >= 4.0) {
+        result.textContent = "Aprobado";
+    } else if (numero < 4.0 && numero >= 1.0) {
+        result.textContent = "Reprobado";
+    } else if (numero < 1.0 && numero > 7.0) {
+        result.textContent = "Ingrese una nota valida";
+    } else {
+        result.textContent = "Ingrese un valor valido";
+    };
+}
+
 function evaluarNota() {
     const result = document.getElementById("result2");
     let input = document.getElementById("input2");
@@ -126,14 +140,18 @@ Entrada: hola mundo
 Salida: HOLA MUNDO
 */
 
+function textoMayuscula(resultado) {
+    let resultado = input.value.toUpperCase();
+
+    return resultado
+}
+
 function transformarTexto() {
     let input = document.getElementById('input4')
     const container = document.getElementById("container4")
     const result = document.getElementById("result4")
-    let resultado = input.value.toUpperCase();
-
-
-    result.textContent = resultado
+    result.textContent = resultado;
+    let valores = textoMayuscula(resultado)
     input.value = "";
     container.classList.remove("d-none")
 }
